@@ -15,6 +15,13 @@ document
       hash: true,
       empty: true,
     });
+    /*加入手机号的判断*/
+    console.log(data);
+    if (data.mobile.length != 11) {
+      myAlert(false, "验证码或手机输入错误");
+      return;
+    }
+    /*加入手机号的判断*/
     //发送请求
     try {
       const result = await axios({
